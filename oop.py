@@ -87,6 +87,14 @@ class Book():
     def __str__(self): # here we define the string rep.
         return 'title: {}, author: {}, pages: {}'.format(self.title, self.author, self.pages)
 
+    def __len__(self):
+        return self.pages
+
+    def __del__(self):
+        print 'a book has been destroyed'
+
 
 b = Book('Python CVCC', 'Joserty', 255)
 print b
+print len(b)
+del b
